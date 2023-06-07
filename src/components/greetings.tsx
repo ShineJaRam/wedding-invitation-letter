@@ -15,7 +15,7 @@ const Greetings = () => {
           임진영 • 김남옥 의 아들 <strong>임수현</strong>
         </p>
         <p>
-          바다 의 딸 <strong>김은영</strong>
+          김한기 • 윤재분 의 딸 <strong>김은영</strong>
         </p>
       </div>
       <div>
