@@ -2,7 +2,6 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import tsconfigPaths from 'vite-tsconfig-paths';
 
-// https://vitejs.dev/config/
 export default defineConfig({
   base: '/wedding-invitation-letter/',
   optimizeDeps: {
@@ -11,7 +10,6 @@ export default defineConfig({
     },
   },
   esbuild: {
-    // https://github.com/vitejs/vite/issues/8644#issuecomment-1159308803
     logOverride: { 'this-is-undefined-in-esm': 'silent' },
   },
   plugins: [
@@ -22,4 +20,7 @@ export default defineConfig({
     }),
     tsconfigPaths(),
   ],
+  build: {
+    outDir: 'build',
+  },
 });
