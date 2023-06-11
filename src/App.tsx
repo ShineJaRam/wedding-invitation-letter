@@ -1,24 +1,14 @@
-import tw, { styled } from 'twin.macro';
 import Greetings from './components/greetings';
 import MainBanner from './components/mainBanner';
 
 const App = () => {
   return (
-    <StyledApp>
+    <article className="mx-auto max-w-5xl bg-[#F2F1F6] px-4">
       <MainBanner />
       <Greetings />
-    </StyledApp>
+      <img className="mx-[-16px] w-full max-w-none" src="images/img2.jpg" alt="우리가 강아지를 끌어안고 있는 사진" />
+    </article>
   );
 };
 
 export default App;
-
-const StyledApp = styled.div`
-  ${tw`max-w-5xl mx-auto px-[20px] pb-20`}
-
-  background-color: #F2F1F6;
-
-  section {
-    ${tw`mb-[150px] last:mb-0`}
-  }
-`;

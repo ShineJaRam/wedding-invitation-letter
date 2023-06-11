@@ -1,44 +1,43 @@
-import tw, { styled } from 'twin.macro';
+import styles from '@styles/animation.module.css';
 
 const Greetings = () => {
   return (
-    <StyledGreetings>
-      <div>
-        <p>새로운 마음과 새 의미를 간직하며,</p>
-        <p>두 사람이 새 출발의 첫걸음을 내딛습니다.</p>
-        <p>좋은 꿈, 바른 뜻으로</p>
-        <p>올바르게 살 수 있도록 축복과 격려 주시면</p>
-        <p>더없는 기쁨으로 간직하겠습니다.</p>
-      </div>
-      <div>
-        <p className="mb-4">
-          임진영 • 김남옥 의 아들 <strong>임수현</strong>
+    <section className="py-10 text-center leading-relaxed">
+      <div className="mb-6">
+        <p className={`relative ${styles['fade-in']}`}>
+          같은 날 태어나 다르게 자라온 두 사람이
+          <br />
+          연인이 되어 세 번의 사계절을 함께 했습니다.
+          <br />
+          <br />
+          네 번째 여름, 가족으로서 첫 걸음을 내딛는 순간에
+          <br />
+          가장 소중한 분들을 모시고자 합니다.
+          <br />
+          <br />
+          귀한 걸음 하시어
+          <br />
+          저희의 시작을 축복해주시면 감사하겠습니다.
         </p>
-        <p>
+      </div>
+      <div className="mb-6">
+        <p className={`relative mb-4 ${styles['fade-in']}`}>
+          임진영 • 김남옥 의 아들 <strong>임수현</strong>
+          <br />
           김한기 • 윤재분 의 딸 <strong>김은영</strong>
         </p>
       </div>
       <div>
-        <p>2023년 8월 26일 토요일</p>
-        <p>오전 11시</p>
-        <p>명동 라루체 루아르홀</p>
+        <p className={`relative ${styles['fade-in']}`}>
+          2023년 8월 26일 토요일
+          <br />
+          오전 11시
+          <br />
+          명동 라루체 루아르홀
+        </p>
       </div>
-    </StyledGreetings>
+    </section>
   );
 };
 
 export default Greetings;
-
-const StyledGreetings = styled.section`
-  ${tw`text-center leading-relaxed`}
-
-  div {
-    ${tw`mb-8`}
-
-    p {
-      strong {
-        ${tw`text-xl`}
-      }
-    }
-  }
-`;
