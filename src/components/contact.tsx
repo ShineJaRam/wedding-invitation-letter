@@ -7,7 +7,7 @@ const Contact = () => {
   const { openModal } = modalStore();
 
   const handleContactModal = () => {
-    openModal({ name: 'contactParents', contents: ContactParentsContents });
+    openModal({ name: 'contactParents', contents: <>{ContactParentsContents}</> });
   };
 
   return (

@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { ReactElement } from 'react';
 import { create } from 'zustand';
 
 const initialState: IModalState = {
@@ -25,7 +25,7 @@ export const modalSelector = (state: IModalState) => state.modals;
 
 export interface IModal {
   name: string;
-  contents?: FC;
+  contents?: ReactElement;
 }
 
 interface IModalState {
