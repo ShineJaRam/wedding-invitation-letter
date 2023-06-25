@@ -20,13 +20,6 @@ const Greetings = () => {
           저희의 시작을 축복해주시면 감사하겠습니다.
         </p>
       </div>
-      <div className="mb-6">
-        <p className={`relative mb-4 ${styles['fade-in']}`}>
-          임진영 • 김남옥 의 아들 <strong>임수현</strong>
-          <br />
-          김한기 • 윤재분 의 딸 <strong>김은영</strong>
-        </p>
-      </div>
       <div>
         <p className={`relative ${styles['fade-in']}`}>
           2023년 8월 26일 토요일

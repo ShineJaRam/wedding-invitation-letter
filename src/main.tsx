@@ -5,10 +5,12 @@ import App from './App';
 import 'tailwindcss/tailwind.css';
 import '@styles/var.css';
 import '@styles/reset.css';
+import ModalPortal from './components/modalPortal';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <GlobalStyles />
     <App />
+    <ModalPortal />
   </React.StrictMode>
 );
