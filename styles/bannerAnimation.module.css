@@ -1,0 +1,37 @@
+.common {
+  animation-duration: 2.5s;
+  animation-duration: ease-in;
+  animation-fill-mode: forwards;
+}
+
+.bannerAnimation1 {
+  animation-name: animation1;
+}
+
+@keyframes animation1 {
+  0% {
+    opacity: 1;
+    transform: scale(100%);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(120%);
+  }
+}
+
+.bannerAnimation2 {
+  animation-name: animation2;
+}
+
+@keyframes animation2 {
+  0% {
+    opacity: 0;
+    transform: scale(120%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(100%);
+  }
+}
