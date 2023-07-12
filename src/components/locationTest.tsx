@@ -6,7 +6,7 @@ const LocationTest = () => {
       <a
         href={`${
           isMobile
-            ? 'nmap://place?name=%uBA85%uB3D9%uB77C%uB8E8%uCCB4&appname=https://shinejaram.github.io/wedding-invitation-letter/'
+            ? 'nmap://place?lat=37.559116633916lng=126.984455216505name=%uBA85%uB3D9%uB77C%uB8E8%uCCB4&appname=https://shinejaram.github.io/wedding-invitation-letter/'
             : 'https://naver.me/xcKJWnge'
         }`}
         target="_blank"
