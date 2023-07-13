@@ -2,7 +2,6 @@ import Calendar from './components/calendar';
 import Contact from './components/contact';
 import Gallary from './components/gallary';
 import Greetings from './components/greetings';
-import LocationTest from './components/locationTest';
 import MainBanner from './components/mainBanner';
 import Location from './components/location';
 
@@ -15,7 +14,6 @@ const App = () => {
       <Calendar />
       <Gallary />
       <Location />
-      <LocationTest />
     </article>
   );
 };
