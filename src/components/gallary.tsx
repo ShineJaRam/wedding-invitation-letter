@@ -29,7 +29,7 @@ const Gallary = () => {
 
           return (
             <div key={idx} className="aspect-square w-[109px] overflow-hidden">
-              <img className="object-cover" src={`/images/gallary/picture-0${_idx}.jpg`} alt="wedding gallary" />
+              <img className="object-cover" src={`images/gallary/picture-0${_idx}.jpg`} alt="wedding gallary" />
             </div>
           );
         })}

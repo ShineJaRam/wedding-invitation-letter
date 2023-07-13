@@ -24,7 +24,7 @@ const Location = () => {
         <a
           href={`${
             isMobile
-              ? `nmap://place?lat=${lat}&lng=${lng}&name=라루체 웨딩&appname=https://shinejaram.github.io/wedding-invitation-letter/`
+              ? `nmap://place?id=13355258&appname=https://shinejaram.github.io/wedding-invitation-letter/`
               : 'https://naver.me/xcKJWnge'
           }`}
           target="_blank"
