@@ -4,6 +4,7 @@ import Gallary from './components/gallary';
 import Greetings from './components/greetings';
 import LocationTest from './components/locationTest';
 import MainBanner from './components/mainBanner';
+import Location from './components/location';
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <Contact />
       <Calendar />
       <Gallary />
+      <Location />
       <LocationTest />
     </article>
   );
