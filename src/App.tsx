@@ -5,10 +5,11 @@ import Greetings from './components/greetings';
 import MainBanner from './components/mainBanner';
 import Location from './components/location';
 import LocationNotice from './components/locationNotice';
+import BankAccount from './components/bankAccount';
 
 const App = () => {
   return (
-    <article className="mx-auto grid max-w-5xl gap-5 bg-[#F2F1F6] px-4 text-center">
+    <article className="mx-auto grid max-w-5xl gap-5 bg-[#F2F1F6] px-4 pb-10 text-center">
       <MainBanner />
       <Greetings />
       <Contact />
@@ -16,6 +17,7 @@ const App = () => {
       <Gallary />
       <Location />
       <LocationNotice />
+      <BankAccount />
     </article>
   );
 };
