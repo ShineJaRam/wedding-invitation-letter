@@ -4,6 +4,7 @@ import Gallary from './components/gallary';
 import Greetings from './components/greetings';
 import MainBanner from './components/mainBanner';
 import Location from './components/location';
+import LocationNotice from './components/locationNotice';
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <Calendar />
       <Gallary />
       <Location />
+      <LocationNotice />
     </article>
   );
 };
