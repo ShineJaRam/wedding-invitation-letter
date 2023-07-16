@@ -46,7 +46,7 @@ const Location = () => {
         <a
           href={`${
             isMobile
-              ? `tmap://route?rGoName=${encodeURIComponent('라루체 웨딩')}&rGoX=${lat}&rGoY=${lng}`
+              ? `tmap://route?rGoName=${encodeURIComponent('라루체 웨딩')}&rGoX=${lng}&rGoY=${lat}`
               : 'http://kko.to/nR1-GIqr2D'
           }`}
           target="_blank"
