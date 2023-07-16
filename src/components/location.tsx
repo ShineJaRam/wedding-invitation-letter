@@ -1,26 +1,28 @@
-import { useEffect, useRef } from 'react';
 import { isMobile } from 'react-device-detect';
+import { Map, MapMarker } from 'react-kakao-maps-sdk';
 
 const Location = () => {
   const lat = 37.559116633916;
   const lng = 126.984455216505;
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (ref.current) {
-      const options = {
-        center: new window.kakao.maps.LatLng(37.559116633916, 126.984455216505),
-        level: 3,
-      };
-
-      new window.kakao.maps.Map(ref.current, options);
-    }
-  }, []);
 
   return (
     <div className="w-full">
-      <div id="kakao_map" ref={ref} style={{ width: '100px', height: '100px' }}></div>
-      <div className="flex gap-1">
+      <Map
+        center={{
+          lat,
+          lng,
+        }}
+        style={{
+          width: '100%',
+          aspectRatio: 1,
+        }}
+      >
+        <MapMarker position={{ lat, lng }}>
+          <div className="w-[150px]">라루체 웨딩홀</div>
+        </MapMarker>
+      </Map>
+
+      <div className="mt-2 flex justify-center gap-1">
         <a
           href={`${
             isMobile
@@ -33,7 +35,6 @@ const Location = () => {
         >
           <button>네이버 지도</button>
         </a>
-
         <a
           href={`${isMobile ? `kakaomap://route?ep=${lat},${lng}&by=CAR` : 'http://kko.to/nR1-GIqr2D'}`}
           target="_blank"
@@ -41,6 +42,18 @@ const Location = () => {
           className="px-2 py-1"
         >
           <button>카카오 지도</button>
+        </a>
+        <a
+          href={`${
+            isMobile
+              ? `tmap://route?rGoName=${encodeURIComponent('라루체 웨딩')}&rGoX=${lat}&rGoY=${lng}`
+              : 'http://kko.to/nR1-GIqr2D'
+          }`}
+          target="_blank"
+          rel="noreferrer noopener"
+          className="px-2 py-1"
+        >
+          <button>티맵 지도</button>
         </a>
       </div>
     </div>

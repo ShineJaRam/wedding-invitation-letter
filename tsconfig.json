@@ -20,7 +20,8 @@
       "@/*": ["./src/*"],
       "@public/*": ["public/*"],
       "@styles/*": ["styles/*"]
-    }
+    },
+    "types": ["kakao.maps.d.ts"]
   },
   "include": ["src", "types"],
   "references": [{ "path": "./tsconfig.node.json" }]

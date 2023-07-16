@@ -23,7 +23,7 @@ const Gallary = () => {
     <div className="py-5">
       <h1>갤러리</h1>
 
-      <div className="flex flex-wrap gap-2">
+      <div className="mb-2 flex flex-wrap gap-2">
         {files.map((_, idx) => {
           const _idx = idx < 10 ? `0${idx}` : idx;
 

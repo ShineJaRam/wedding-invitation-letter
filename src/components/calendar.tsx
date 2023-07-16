@@ -1,4 +1,5 @@
 import dayjs from 'dayjs';
+import { useEffect } from 'react';
 import ReactCalendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import tw, { styled } from 'twin.macro';
@@ -8,6 +9,14 @@ const Calendar = () => {
   const targetDay = new Date('2023-08-26');
 
   const dDay = Math.ceil((targetDay.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
+
+  useEffect(() => {
+    const label = document.getElementsByClassName('react-calendar__navigation__label')[0] as HTMLButtonElement;
+
+    if (label) {
+      label.disabled = true;
+    }
+  }, []);
 
   return (
     <StyledCalendar>
