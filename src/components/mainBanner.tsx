@@ -4,7 +4,7 @@ import styles from '@styles/bannerAnimation.module.css';
 const MainBanner = () => {
   return (
     <StyledMainBanner className="relative mx-[-16px] h-screen overflow-hidden">
-      <h1 className="banner-text w-full bg-[var(--banner-color)] py-6 text-center text-white">
+      <h1 className="banner-text w-full bg-[var(--primary-color)] py-6 text-center font-[AppleSDGothicNeo] text-white">
         WEDDING DAY
         <br />
         2023.08.26 11:00am

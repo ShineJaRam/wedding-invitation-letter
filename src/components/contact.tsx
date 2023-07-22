@@ -17,7 +17,7 @@ const Contact = () => {
         src="images/img2.jpg"
         alt="우리가 강아지를 끌어안고 있는 사진"
       />
-      <p className={`relative py-4 text-center ${styles['fade-in']}`}>
+      <p className={`relative py-8 text-center ${styles['fade-in']}`}>
         <span className="flex items-center justify-center">
           임진영 • 김남옥 의 아들 <strong className="ml-2">임수현</strong>
           <a className="ml-2 inline-block" href="tel:010-2770-9107">
@@ -35,7 +35,12 @@ const Contact = () => {
         </span>
       </p>
       <p className="text-center">
-        <button onClick={handleContactModal}>혼주에게 연락하기</button>
+        <button
+          className="rounded-full border border-solid border-[var(--primary-color)] px-10 py-3 text-[var(--primary-color)]"
+          onClick={handleContactModal}
+        >
+          혼주에게 연락하기
+        </button>
       </p>
     </div>
   );

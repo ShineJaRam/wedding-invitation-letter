@@ -9,7 +9,7 @@ import BankAccount from './components/bankAccount';
 
 const App = () => {
   return (
-    <article className="mx-auto grid max-w-5xl gap-5 bg-[#F2F1F6] px-4 pb-10 text-center">
+    <article className="mx-auto grid max-w-5xl gap-5 bg-[var(--white-color)] px-4 pb-10 text-center">
       <MainBanner />
       <Greetings />
       <Contact />
