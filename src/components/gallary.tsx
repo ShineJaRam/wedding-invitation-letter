@@ -28,14 +28,21 @@ const Gallary = () => {
           const _idx = idx < 10 ? `0${idx}` : idx;
 
           return (
-            <div key={idx} className="aspect-square w-[109px] overflow-hidden">
-              <img className="object-cover" src={`images/gallary/picture-0${_idx}.jpg`} alt="wedding gallary" />
+            <div key={idx} className="aspect-square w-[calc((100%/3)-8px)] overflow-hidden">
+              <img
+                className="h-full w-full object-cover"
+                src={`images/gallary/picture-0${_idx}.jpg`}
+                alt="wedding gallary"
+              />
             </div>
           );
         })}
       </div>
-
-      <button onClick={handleMore}>더보기</button>
+      {showingIndex !== 47 && (
+        <button className="" onClick={handleMore}>
+          더보기
+        </button>
+      )}
     </div>
   );
 };

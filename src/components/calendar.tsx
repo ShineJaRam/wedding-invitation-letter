@@ -2,6 +2,7 @@ import dayjs from 'dayjs';
 import { useEffect } from 'react';
 import ReactCalendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
+import { CALENDAR_TYPES } from 'react-calendar/dist/cjs/shared/const';
 import tw, { styled } from 'twin.macro';
 
 const Calendar = () => {
@@ -25,6 +26,7 @@ const Calendar = () => {
         formatDay={(_, date) => dayjs(date).format('D')}
         minDate={targetDay}
         maxDate={targetDay}
+        calendarType={CALENDAR_TYPES.HEBREW}
       />
       <p className="mt-5">결혼식이 {dDay}일 남았습니다.</p>
     </StyledCalendar>
@@ -34,17 +36,34 @@ const Calendar = () => {
 export default Calendar;
 
 const StyledCalendar = styled.div`
-  ${tw`grid items-center justify-center py-5 text-center`}
+  ${tw`grid items-center justify-center py-3 text-center h-screen`}
 
   .react-calendar {
     width: 100%;
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+  }
+
+  .react-calendar__navigation button:disabled {
+    background-color: transparent;
   }
 
   .react-calendar__tile {
-    background-color: #f0f0f0;
+    background-color: transparent;
+    aspect-ratio: 1;
+  }
+
+  .react-calendar__navigation__arrow {
+    display: none;
   }
 
   .react-calendar__tile--active {
-    background-color: green;
+    background-color: var(--grapefruit);
+    border-radius: 50%;
+    color: white !important;
+  }
+
+  .react-calendar__month-view__days__day--weekend {
+    color: #333;
   }
 `;
