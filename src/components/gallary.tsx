@@ -1,5 +1,6 @@
 import modalStore from '@/store/modalStore';
 import { useState } from 'react';
+import SliderModal from './sliderModal';
 
 const Gallary = () => {
   const { openModal } = modalStore();
@@ -21,19 +22,10 @@ const Gallary = () => {
     });
   };
 
-  const onClickImg = (idx: number) => {
-    const _idx = idx < 10 ? `0${idx}` : idx;
+  const onClickImg = (idx?: number) => {
     openModal({
       name: 'imgModals',
-      contents: (
-        <div className="flex aspect-[9/16] h-[70vh] items-center justify-center rounded">
-          <img
-            className="h-full w-full rounded object-cover"
-            src={`images/gallary/picture-0${_idx}.jpg`}
-            alt={`wedding gallary ${idx + 1}`}
-          />
-        </div>
-      ),
+      contents: <SliderModal basicIdx={idx} />,
     });
   };
 
