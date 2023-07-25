@@ -34,7 +34,7 @@ const SliderModal: FC<SliderModalProps> = ({ basicIdx = 0 }) => {
           return (
             <div
               key={idx}
-              className="flex aspect-[9/16] w-full items-center justify-center rounded bg-black text-center text-white"
+              className="flex aspect-[9/16] w-full items-center justify-center rounded bg-[rgba(0,0,0,0.8)] text-center text-white"
             >
               <img
                 className="h-full w-full rounded  object-contain"
