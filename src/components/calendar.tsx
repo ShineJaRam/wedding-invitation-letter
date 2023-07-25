@@ -36,7 +36,7 @@ const Calendar = () => {
 export default Calendar;
 
 const StyledCalendar = styled.div`
-  ${tw`grid items-center justify-center py-3 text-center h-screen`}
+  ${tw`grid items-center justify-center py-3 text-center h-screen snap-start`}
 
   .react-calendar {
     width: 100%;
@@ -58,9 +58,24 @@ const StyledCalendar = styled.div`
   }
 
   .react-calendar__tile--active {
-    background-color: var(--grapefruit);
-    border-radius: 50%;
     color: white !important;
+    position: relative;
+  }
+
+  .react-calendar__tile--active::before {
+    content: '26';
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--grapefruit);
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
   }
 
   .react-calendar__month-view__days__day--weekend {

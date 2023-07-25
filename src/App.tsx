@@ -8,7 +8,12 @@ import BankAccount from './components/bankAccount';
 
 const App = () => {
   return (
-    <article className="mx-auto grid max-w-[767px] gap-5 bg-[var(--white-color)] px-4 pb-10 text-center">
+    <article
+      className="mx-auto grid h-screen max-w-[767px] overflow-auto bg-[var(--white-color)] px-4 pb-10 text-center"
+      style={{
+        scrollSnapType: 'y mandatory',
+      }}
+    >
       <MainBanner />
       <Calendar />
       <Contact />

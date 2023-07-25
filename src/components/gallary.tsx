@@ -30,7 +30,7 @@ const Gallary = () => {
   };
 
   return (
-    <div className="py-5">
+    <div className="h-screen snap-start overflow-auto py-5">
       <h1 className="mb-6 font-semibold">갤러리</h1>
 
       <div className="mb-6 flex flex-wrap gap-2">

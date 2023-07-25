@@ -4,7 +4,7 @@ import { BsTelephoneFill } from 'react-icons/bs';
 const ContactParentsContents: FC = () => {
   return (
     <div className="w-[calc(100vw-100px)] rounded bg-white text-center">
-      <div className="rounded-t bg-[var(--secondary-color)] py-4 font-bold text-white">
+      <div className="rounded-t bg-[var(--primary-color)] py-4 font-bold text-white">
         <p>혼주에게 연락하기</p>
       </div>
       <div className="rounded-b bg-[#f4f1ee] p-4">

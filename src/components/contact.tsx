@@ -11,7 +11,7 @@ const Contact = () => {
   };
 
   return (
-    <div>
+    <div className="h-screen snap-start">
       <img
         className="mx-[-16px] w-screen max-w-none md:max-w-[calc(100%+32px)]"
         src="images/img2.jpg"
