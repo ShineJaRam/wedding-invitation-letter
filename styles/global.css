@@ -1,6 +1,2 @@
 @import 'slick-carousel/slick/slick.css';
 @import 'slick-carousel/slick/slick-theme.css';
-
-.slick-slide {
-  width: 295px !important;
-}

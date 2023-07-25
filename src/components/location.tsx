@@ -6,7 +6,7 @@ const Location = () => {
   const lng = 126.984455216505;
 
   return (
-    <div className="w-full">
+    <div className="mb-6 w-full">
       <Map
         center={{
           lat,
@@ -22,7 +22,7 @@ const Location = () => {
         </MapMarker>
       </Map>
 
-      <div className="mt-2 flex justify-center gap-1">
+      <div className="flex items-center justify-around gap-1 bg-[var(--third-color)] py-1">
         <a
           href={`${
             isMobile
@@ -31,18 +31,22 @@ const Location = () => {
           }`}
           target="_blank"
           rel="noreferrer noopener"
-          className="px-2 py-1"
+          className="flex items-center justify-center px-2 py-2"
         >
-          <button>네이버 지도</button>
+          <img className="mr-1 h-5 w-5 rounded" src="images/icons/icon_naver_map.webp" alt="naver map icon" />
+          <button className="text-xs">네이버 지도</button>
         </a>
+        <div className="h-5 border-l border-solid border-[#333]" />
         <a
           href={`${isMobile ? `kakaomap://route?ep=${lat},${lng}&by=CAR` : 'http://kko.to/nR1-GIqr2D'}`}
           target="_blank"
           rel="noreferrer noopener"
-          className="px-2 py-1"
+          className="flex items-center justify-center px-2 py-2"
         >
-          <button>카카오 지도</button>
+          <img className="mr-1 h-5 w-5 rounded" src="images/icons/icon_kakao_map.svg" alt="kakao map icon" />
+          <button className="text-xs">카카오 지도</button>
         </a>
+        <div className="h-5 border-l border-solid border-[#333]" />
         <a
           href={`${
             isMobile
@@ -51,9 +55,10 @@ const Location = () => {
           }`}
           target="_blank"
           rel="noreferrer noopener"
-          className="px-2 py-1"
+          className="flex items-center justify-center px-2 py-2"
         >
-          <button>티맵 지도</button>
+          <img className="mr-1 h-5 w-5 rounded" src="images/icons/icon_t_map.svg" alt="t map icon" />
+          <button className="text-xs">티맵 지도</button>
         </a>
       </div>
     </div>

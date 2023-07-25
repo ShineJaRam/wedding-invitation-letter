@@ -33,7 +33,7 @@ const Gallary = () => {
     <div className="py-5">
       <h1 className="mb-6 font-semibold">갤러리</h1>
 
-      <div className="mb-2 flex flex-wrap gap-2">
+      <div className="mb-6 flex flex-wrap gap-2">
         {files.map((_, idx) => {
           const _idx = idx < 10 ? `0${idx}` : idx;
 
@@ -53,7 +53,10 @@ const Gallary = () => {
         })}
       </div>
       {showingIndex !== 47 && (
-        <button className="" onClick={handleMore}>
+        <button
+          className="rounded-full border border-solid border-[var(--primary-color)] px-10 py-3 text-[var(--primary-color)]"
+          onClick={handleMore}
+        >
           더보기
         </button>
       )}

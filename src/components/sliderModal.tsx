@@ -26,7 +26,7 @@ const SliderModal: FC<SliderModalProps> = ({ basicIdx = 0 }) => {
   }, [basicIdx]);
 
   return (
-    <div className="aspect-[9/16] w-[calc(100vw-80px)]">
+    <div className="aspect-[9/16] w-[calc(100vw-80px)] max-w-[400px]">
       <Slider ref={sliderRef} {...settings} className="h-full w-full">
         {modalFiles.map((el, idx) => {
           const _idx = idx < 10 ? `0${idx}` : idx;
@@ -34,7 +34,7 @@ const SliderModal: FC<SliderModalProps> = ({ basicIdx = 0 }) => {
           return (
             <div
               key={idx}
-              className="flex aspect-[9/16] w-[300px] items-center justify-center bg-black text-center  text-white"
+              className="flex aspect-[9/16] w-full items-center justify-center rounded bg-black text-center text-white"
             >
               <img
                 className="h-full w-full rounded  object-cover"
