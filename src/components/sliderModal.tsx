@@ -37,7 +37,7 @@ const SliderModal: FC<SliderModalProps> = ({ basicIdx = 0 }) => {
               className="flex aspect-[9/16] w-full items-center justify-center rounded bg-black text-center text-white"
             >
               <img
-                className="h-full w-full rounded  object-cover"
+                className="h-full w-full rounded  object-contain"
                 src={`images/gallary/picture-0${_idx}.jpg`}
                 alt={`wedding gallary ${idx + 1}`}
               />
