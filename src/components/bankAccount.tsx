@@ -9,7 +9,7 @@ const BankAccount = () => {
   };
 
   return (
-    <div className="h-screen snap-start">
+    <div className="">
       <h2 className="mb-4">마음 전하실 곳</h2>
 
       <div className="mx-auto mb-2 w-full max-w-[290px]">

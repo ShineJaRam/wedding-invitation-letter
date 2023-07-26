@@ -36,7 +36,7 @@ const Calendar = () => {
 export default Calendar;
 
 const StyledCalendar = styled.div`
-  ${tw`grid items-center justify-center py-3 text-center h-screen snap-start`}
+  ${tw`grid items-center justify-center py-3 text-center`}
 
   .react-calendar {
     width: 100%;
