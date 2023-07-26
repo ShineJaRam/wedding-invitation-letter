@@ -1,93 +1,150 @@
 import { useState } from 'react';
 import styles from 'styles/collapse.module.css';
+import { BsChevronDown } from 'react-icons/bs';
+import copy from 'copy-to-clipboard';
 
 const BankAccount = () => {
-  const [isOpen, setIsOpen] = useState(0);
+  const [isFirstOpen, setIsFirstOpen] = useState(false);
+  const [isSecondOpen, setIsSecondOpen] = useState(false);
 
-  const handleOpen = (idx: number) => {
-    setIsOpen(idx);
+  const handleClipboard = (name: string, account: string) => {
+    const _account = account.replace('-', '');
+    copy(_account);
+    alert(`${name}님의 계좌번호가 복사되었습니다.\n${account}`);
   };
 
   return (
     <div className="">
-      <h2 className="mb-4">마음 전하실 곳</h2>
+      <h2 className="mb-4 font-bold text-[var(--primary-color)]">마음 전하실 곳</h2>
 
       <div className="mx-auto mb-2 w-full max-w-[290px]">
         <button
-          className="h-10 w-full"
+          className="relative h-10 w-full rounded-[5px] bg-[#458340] text-[12px] font-bold text-white"
           onClick={() => {
-            handleOpen(1);
+            setIsFirstOpen(!isFirstOpen);
           }}
         >
           신랑측 계좌번호
+          <BsChevronDown className="absolute right-[12px] top-[50%] translate-y-[-50%]" />
         </button>
 
-        <div className={`${isOpen === 1 ? '' : 'h-0'} ${styles.collapse} overflow-hidden`}>
-          <div className="flex justify-between px-2 py-1">
-            <p className="text-left">
-              국민 계좌번호
-              <br />
-              임진영
-            </p>
-            <button>복사하기</button>
+        <div
+          className={`${isFirstOpen ? 'h-[177px]' : 'h-0'} ${
+            styles.collapse
+          } overflow-hidden rounded-b-[5px] bg-[#EBF5F1]`}
+          style={{
+            transition: 'height 0.5s ease-in-out',
+          }}
+        >
+          <div className="flex justify-between px-[18px] py-[13px]">
+            <div className="text-left">
+              <p className="mb-[5px] text-[12px]">우체국 900886-02-035896</p>
+              <span className="text-[12px]">임진영</span>
+            </div>
+            <button
+              className="rounded-[5px] bg-[#458340] px-[6px] py-1 text-[10px] text-white"
+              onClick={() => {
+                handleClipboard('임진영', '900886-02-035896');
+              }}
+            >
+              복사
+            </button>
           </div>
 
-          <div className="flex justify-between px-2 py-1">
-            <p className="text-left">
-              농협 계좌번호
-              <br />
-              김남옥
-            </p>
-            <button>복사하기</button>
+          <div className="flex justify-between px-[18px] py-[13px]">
+            <div className="text-left">
+              <p className="mb-[5px] text-[12px]">농협은행 301812-51-034401</p>
+              <span className="text-[12px]">김남옥</span>
+            </div>
+            <button
+              className="rounded-[5px] bg-[#458340] px-[6px] py-1 text-[10px] text-white"
+              onClick={() => {
+                handleClipboard('김남옥', '301812-51-034401');
+              }}
+            >
+              복사
+            </button>
           </div>
 
-          <div className="flex justify-between px-2 py-1">
-            <p className="text-left">
-              신한 110325289728
-              <br />
-              임수현
-            </p>
-            <button>복사하기</button>
+          <div className="flex justify-between px-[18px] py-[13px]">
+            <div className="text-left">
+              <p className="mb-[5px] text-[12px]">신한은행 110-325-289728</p>
+              <span className="text-[12px]">임수현</span>
+            </div>
+            <button
+              className="rounded-[5px] bg-[#458340] px-[6px] py-1 text-[10px] text-white"
+              onClick={() => {
+                handleClipboard('임수현', '110-325-289728');
+              }}
+            >
+              복사
+            </button>
           </div>
         </div>
       </div>
 
       <div className="mx-auto w-full max-w-[290px]">
         <button
-          className="h-10 w-full"
+          className="relative h-10 w-full rounded-[5px] bg-[#458340] text-[12px] font-bold text-white"
           onClick={() => {
-            handleOpen(2);
+            setIsSecondOpen(!isSecondOpen);
           }}
         >
           신부측 계좌번호
+          <BsChevronDown className="absolute right-[12px] top-[50%] translate-y-[-50%]" />
         </button>
 
-        <div className={`${isOpen === 2 ? '' : 'h-0'} ${styles.collapse} overflow-hidden`}>
-          <div className="flex justify-between px-2 py-1">
-            <p className="text-left">
-              국민 계좌번호
-              <br />
-              김한기
-            </p>
-            <button>복사하기</button>
+        <div
+          className={`${isSecondOpen ? 'h-[177px]' : 'h-0'} ${
+            styles.collapse
+          } overflow-hidden rounded-b-[5px] bg-[#EBF5F1]`}
+          style={{
+            transition: 'height 0.5s ease-in-out',
+          }}
+        >
+          <div className="flex justify-between px-[18px] py-[13px]">
+            <div className="text-left">
+              <p className="mb-[5px] text-[12px]">국민은행 392801-04-023183</p>
+              <span className="text-[12px]">김한기</span>
+            </div>
+            <button
+              className="rounded-[5px] bg-[#458340] px-[6px] py-1 text-[10px] text-white"
+              onClick={() => {
+                handleClipboard('김한기', '392801-04-023183');
+              }}
+            >
+              복사
+            </button>
           </div>
 
-          <div className="flex justify-between px-2 py-1">
-            <p className="text-left">
-              국민 계좌번호
-              <br />
-              윤재분
-            </p>
-            <button>복사하기</button>
+          <div className="flex justify-between px-[18px] py-[13px]">
+            <div className="text-left">
+              <p className="mb-[5px] text-[12px]">국민은행 392802-04-074027</p>
+              <span className="text-[12px]">윤재분</span>
+            </div>
+            <button
+              className="rounded-[5px] bg-[#458340] px-[6px] py-1 text-[10px] text-white"
+              onClick={() => {
+                handleClipboard('윤재분', '392802-04-074027');
+              }}
+            >
+              복사
+            </button>
           </div>
 
-          <div className="flex justify-between px-2 py-1">
-            <p className="text-left">
-              카카오 계좌번호
-              <br />
-              김은영
-            </p>
-            <button>복사하기</button>
+          <div className="flex justify-between px-[18px] py-[13px]">
+            <div className="text-left">
+              <p className="mb-[5px] text-[12px]">토스뱅크 1000-2967-4885</p>
+              <span className="text-[12px]">김은영</span>
+            </div>
+            <button
+              className="rounded-[5px] bg-[#458340] px-[6px] py-1 text-[10px] text-white"
+              onClick={() => {
+                handleClipboard('김은영', '1000-2967-4885');
+              }}
+            >
+              복사
+            </button>
           </div>
         </div>
       </div>
