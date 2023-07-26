@@ -6,7 +6,7 @@ const Location = () => {
   const lng = 126.984455216505;
 
   return (
-    <div className="mb-6 h-screen w-full snap-start">
+    <div className="mb-6 w-full">
       <Map
         center={{
           lat,

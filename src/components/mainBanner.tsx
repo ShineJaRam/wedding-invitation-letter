@@ -1,10 +1,9 @@
-import { styled } from 'twin.macro';
 import styles from '@styles/bannerAnimation.module.css';
 import { motion } from 'framer-motion';
 
 const MainBanner = () => {
   return (
-    <StyledMainBanner className="relative mx-[-16px] h-screen snap-start overflow-hidden bg-[#EBF5F1]">
+    <section className="relative mx-[-16px] h-screen overflow-hidden bg-[#EBF5F1]">
       <h1 className="banner-text relative bottom-[-7px] flex h-[20%] w-full flex-col justify-center text-center">
         <p className="relative bottom-[-5px] right-[30px] text-[24px] font-bold">08</p>
         <hr className="mx-auto w-[37px] rotate-[135deg] border-[0.5px] border-solid border-[#333]" />
@@ -39,10 +38,8 @@ const MainBanner = () => {
           <p className="text-[10px]">명동 라루체 루아르홀</p>
         </div>
       </motion.div>
-    </StyledMainBanner>
+    </section>
   );
 };
 
 export default MainBanner;
-
-const StyledMainBanner = styled.section``;

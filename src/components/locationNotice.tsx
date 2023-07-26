@@ -1,6 +1,6 @@
 const LocationNotice = () => {
   return (
-    <div className="h-screen snap-start text-left">
+    <div className="text-left">
       <div className="mb-6">
         <h2 className="mb-1 font-semibold text-[var(--primary-color)]">지하철 이용시</h2>
         <p className="text-sm">
