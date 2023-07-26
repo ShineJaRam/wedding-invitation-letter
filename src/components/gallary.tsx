@@ -1,8 +1,9 @@
 import modalStore from '@/store/modalStore';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import SliderModal from './sliderModal';
 
 const Gallary = () => {
+  const ref = useRef<HTMLDivElement>(null);
   const { openModal } = modalStore();
   const [showingIndex, setShowingIndex] = useState(9);
 
@@ -29,8 +30,34 @@ const Gallary = () => {
     });
   };
 
+  useEffect(() => {
+    const container = document.getElementById('container');
+    const observer = new IntersectionObserver(
+      ([e]) => {
+        if (container) {
+          if (e.isIntersecting) {
+            container.style.scrollSnapType = '';
+          } else {
+            container.style.scrollSnapType = 'y mandatory';
+          }
+        }
+      },
+      {
+        threshold: 0.3,
+      }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
-    <div className="py-5">
+    <div className="py-5" ref={ref}>
       <h1 className="mb-6 font-semibold">갤러리</h1>
 
       <div className="mb-6 flex flex-wrap gap-2">
