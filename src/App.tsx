@@ -3,24 +3,22 @@ import Contact from './components/contact';
 import Gallary from './components/gallary';
 import MainBanner from './components/mainBanner';
 import Location from './components/location';
-import LocationNotice from './components/locationNotice';
 import BankAccount from './components/bankAccount';
+import { useVh } from './hooks/useVh';
 
 const App = () => {
+  useVh();
+
   return (
     <article
       id="container"
-      className="mx-auto grid max-w-[767px] bg-[var(--white-color)] px-4 pb-10 text-center"
-      style={{
-        scrollSnapType: 'y mandatory',
-      }}
+      className="scroll-container mx-auto grid max-w-[767px] bg-[var(--white-color)] px-4 pb-10 text-center"
     >
       <MainBanner />
-      <Calendar />
       <Contact />
+      <Calendar />
       <Gallary />
       <Location />
-      <LocationNotice />
       <BankAccount />
     </article>
   );

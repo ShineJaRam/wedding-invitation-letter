@@ -11,12 +11,14 @@ const Contact = () => {
   };
 
   return (
-    <div className="">
-      <img
-        className="mx-[-16px] w-screen max-w-none md:max-w-[calc(100%+32px)]"
-        src="images/img2.jpg"
-        alt="우리가 강아지를 끌어안고 있는 사진"
-      />
+    <div className="scroll-area">
+      <div className="relative mx-[-16px] h-[480px] w-screen max-w-none overflow-hidden md:max-w-[calc(100%+32px)]">
+        <img
+          className="absolute bottom-0 left-1/2 translate-x-[-50%]"
+          src="images/img2.jpg"
+          alt="우리가 강아지를 끌어안고 있는 사진"
+        />
+      </div>
       <p className={`relative py-8 text-center ${styles['fade-in']}`}>
         <span className="flex items-center justify-center">
           임진영 • 김남옥 의 아들 <strong className="ml-2">임수현</strong>
@@ -34,6 +36,7 @@ const Contact = () => {
           </a>
         </span>
       </p>
+
       <p className="text-center">
         <button
           className="rounded-full border border-solid border-[var(--primary-color)] px-10 py-3 text-[var(--primary-color)]"

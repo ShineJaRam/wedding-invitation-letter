@@ -5,20 +5,14 @@ import SliderModal from './sliderModal';
 const Gallary = () => {
   const ref = useRef<HTMLDivElement>(null);
   const { openModal } = modalStore();
-  const [showingIndex, setShowingIndex] = useState(9);
+  const [showingIndex, setShowingIndex] = useState(12);
 
   const files = [...Array(showingIndex)].map(() => 0);
 
   const handleMore = () => {
     setShowingIndex((prev) => {
-      if (prev === 45) {
-        return (prev += 2);
-      }
-
-      if (prev >= 47) {
-        return prev;
-      }
-
+      if (prev === 39) return (prev += 8);
+      if (prev >= 47) return prev;
       return (prev += 9);
     });
   };
@@ -43,7 +37,7 @@ const Gallary = () => {
         }
       },
       {
-        threshold: 0.3,
+        threshold: 0.05,
       }
     );
 
@@ -57,7 +51,7 @@ const Gallary = () => {
   }, []);
 
   return (
-    <div className="py-5" ref={ref}>
+    <div className="h-max min-h-cvh py-5" ref={ref}>
       <h1 className="mb-6 font-semibold">갤러리</h1>
 
       <div className="mb-6 flex flex-wrap gap-2">

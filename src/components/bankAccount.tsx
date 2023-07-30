@@ -14,7 +14,7 @@ const BankAccount = () => {
   };
 
   return (
-    <div className="">
+    <div className="scroll-area flex flex-col justify-center ">
       <h2 className="mb-4 font-bold text-[var(--primary-color)]">마음 전하실 곳</h2>
 
       <div className="mx-auto mb-2 w-full max-w-[290px]">

@@ -20,7 +20,7 @@ const Calendar = () => {
   }, []);
 
   return (
-    <div className="grid items-center justify-center py-3 text-center">
+    <div className="scroll-area grid items-center justify-center py-3 text-center">
       <ReactCalendar
         defaultValue={targetDay}
         formatDay={(_, date) => dayjs(date).format('D')}
