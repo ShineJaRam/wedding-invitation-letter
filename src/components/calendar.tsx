@@ -1,8 +1,5 @@
-import dayjs from 'dayjs';
 import { useEffect } from 'react';
-import ReactCalendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
-import { CALENDAR_TYPES } from 'react-calendar/dist/cjs/shared/const';
 import '@styles/calendar.css';
 
 const Calendar = () => {
@@ -20,14 +17,18 @@ const Calendar = () => {
   }, []);
 
   return (
-    <div className="scroll-area grid items-center justify-center py-3 text-center">
-      <ReactCalendar
-        defaultValue={targetDay}
-        formatDay={(_, date) => dayjs(date).format('D')}
-        minDate={targetDay}
-        maxDate={targetDay}
-        calendarType={CALENDAR_TYPES.HEBREW}
-      />
+    <div className="scroll-area grid items-center justify-center overflow-hidden py-3 text-center">
+      <p>팔월의 스물여섯번째 날</p>
+
+      <div className="relative flex w-[calc(100vw-100px)] min-w-[220px] max-w-[450px] justify-center">
+        <img className="h-full w-full" src="images/calendar.png" alt="calendar img" />
+        <img
+          className="absolute bottom-[16%] left-[91%] h-[11.1%] w-[11.6%]"
+          src="images/icon-heart.png"
+          alt="heart icon"
+        />
+      </div>
+
       <p className="mt-5">결혼식이 {dDay}일 남았습니다.</p>
     </div>
   );

@@ -12,7 +12,7 @@ const App = () => {
   return (
     <article
       id="container"
-      className="scroll-container mx-auto grid max-w-[767px] bg-[var(--white-color)] px-4 pb-10 text-center"
+      className="scroll-container mx-auto grid min-w-[320px] max-w-[767px] bg-[var(--white-color)] text-center"
     >
       <MainBanner />
       <Contact />

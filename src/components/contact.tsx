@@ -11,8 +11,8 @@ const Contact = () => {
   };
 
   return (
-    <div className="scroll-area">
-      <div className="relative mx-[-16px] h-[480px] w-screen max-w-none overflow-hidden md:max-w-[calc(100%+32px)]">
+    <div className="scroll-area overflow-hidden">
+      <div className="relative h-[480px] w-screen max-w-full overflow-hidden md:max-w-[calc(100%+32px)]">
         <img
           className="absolute bottom-0 left-1/2 translate-x-[-50%]"
           src="images/img2.jpg"

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const MainBanner = () => {
   return (
-    <section className="scroll-area relative mx-[-16px] h-screen overflow-hidden bg-[#EBF5F1]">
+    <section className="scroll-area relative overflow-hidden bg-[#EBF5F1]">
       <h1 className="banner-text relative bottom-[-7px] flex h-[20%] w-full flex-col justify-center text-center">
         <p className="relative bottom-[-5px] right-[30px] text-[24px] font-bold">08</p>
         <hr className="mx-auto w-[37px] rotate-[135deg] border-[0.5px] border-solid border-[#333]" />

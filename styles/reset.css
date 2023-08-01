@@ -129,9 +129,8 @@ table {
   border-spacing: 0;
 }
 
-body {
-  min-height: 100vh;
-  @supports (-webkit-appearance: none) and (stroke-color: transparent) {
-    min-height: -webkit-fill-available;
-  }
+html,
+body,
+#root {
+  height: 100%;
 }

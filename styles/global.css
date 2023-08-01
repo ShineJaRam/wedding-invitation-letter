@@ -9,6 +9,7 @@
 
 .scroll-area {
   max-width: 767px;
+  width: 100%;
   scroll-snap-align: start;
   height: calc(var(--vh, 1vh) * 100);
 }

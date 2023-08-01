@@ -51,17 +51,17 @@ const Gallary = () => {
   }, []);
 
   return (
-    <div className="h-max min-h-cvh py-5" ref={ref}>
+    <div className="h-max min-h-cvh overflow-hidden px-4 py-5" ref={ref}>
       <h1 className="mb-6 font-semibold">갤러리</h1>
 
-      <div className="mb-6 flex flex-wrap gap-2">
+      <div className="mb-6 flex flex-wrap gap-[8px]">
         {files.map((_, idx) => {
           const _idx = idx < 10 ? `0${idx}` : idx;
 
           return (
             <div
               key={idx}
-              className="aspect-square w-[calc((100%/3)-8px)] overflow-hidden rounded"
+              className="aspect-square w-[calc((100%-16px)/3)] overflow-hidden rounded"
               onClick={() => onClickImg(idx)}
             >
               <img
