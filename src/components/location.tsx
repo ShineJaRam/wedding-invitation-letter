@@ -7,7 +7,7 @@ const Location = () => {
 
   return (
     <div className="scroll-area relative mb-6 w-full overflow-hidden px-[16px] pt-[50px]">
-      <h1 className="mb-10 font-semibold">오시는 길</h1>
+      <h1 className="mb-10 text-xl font-bold">오시는 길</h1>
 
       <div
         className="absolute left-1/2 top-[15%] w-full px-[16px]"
@@ -22,7 +22,7 @@ const Location = () => {
           }}
           style={{
             width: '100%',
-            height: '250px',
+            height: '230px',
           }}
         >
           <MapMarker position={{ lat, lng }}>

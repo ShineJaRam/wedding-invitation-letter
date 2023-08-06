@@ -52,7 +52,7 @@ const Gallary = () => {
 
   return (
     <div className="h-max min-h-cvh overflow-hidden px-4 py-5" ref={ref}>
-      <h1 className="mb-6 font-semibold">갤러리</h1>
+      <h1 className="mb-6 text-xl font-bold">갤러리</h1>
 
       <div className="mb-6 flex flex-wrap gap-[8px]">
         {files.map((_, idx) => {
@@ -75,7 +75,7 @@ const Gallary = () => {
       </div>
       {showingIndex !== 47 && (
         <button
-          className="rounded-full border border-solid border-[var(--primary-color)] px-10 py-3 text-[var(--primary-color)]"
+          className="rounded-full border border-solid border-[var(--primary-color)] px-6 py-2 text-[var(--primary-color)]"
           onClick={handleMore}
         >
           더보기

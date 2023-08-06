@@ -5,6 +5,7 @@ import MainBanner from './components/mainBanner';
 import Location from './components/location';
 import BankAccount from './components/bankAccount';
 import { useVh } from './hooks/useVh';
+import InvitationPhrase from './components/invitationPhrase';
 
 const App = () => {
   useVh();
@@ -15,6 +16,7 @@ const App = () => {
       className="scroll-container mx-auto grid min-w-[320px] max-w-[767px] bg-[var(--white-color)] text-center"
     >
       <MainBanner />
+      <InvitationPhrase />
       <Contact />
       <Calendar />
       <Gallary />

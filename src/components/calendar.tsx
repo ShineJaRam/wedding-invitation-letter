@@ -18,7 +18,7 @@ const Calendar = () => {
 
   return (
     <div className="scroll-area grid items-center justify-center overflow-hidden py-3 text-center">
-      <p>팔월의 스물여섯번째 날</p>
+      <p className="text-xl font-bold">팔월의 스물여섯번째 날</p>
 
       <div className="relative flex w-[calc(100vw-100px)] min-w-[220px] max-w-[450px] justify-center">
         <img className="h-full w-full" src="images/calendar.png" alt="calendar img" />
