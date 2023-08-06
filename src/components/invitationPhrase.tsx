@@ -4,7 +4,7 @@ const InvitationPhrase = () => {
   return (
     <div className="scroll-area flex flex-col items-center justify-center overflow-hidden">
       <PiFeatherFill className="mb-[20px] fill-[var(--primary-color)]" />
-      <h2 className="mb-[30px] text-xl font-bold">모시는 글</h2>
+      <h2 className="mb-[30px] text-xl font-bold text-[var(--primary-color)]">모시는 글</h2>
       <p className="leading-[180%]">
         같은 날 태어나 다르게 자라온 두 사람이
         <br />

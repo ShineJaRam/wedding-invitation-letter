@@ -52,7 +52,7 @@ const Gallary = () => {
 
   return (
     <div className="h-max min-h-cvh overflow-hidden px-4 py-5" ref={ref}>
-      <h1 className="mb-6 text-xl font-bold">갤러리</h1>
+      <h1 className="mb-6 text-xl font-bold text-[var(--primary-color)]">갤러리</h1>
 
       <div className="mb-6 flex flex-wrap gap-[8px]">
         {files.map((_, idx) => {
