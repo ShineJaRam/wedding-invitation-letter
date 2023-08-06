@@ -4,12 +4,9 @@ import Gallary from './components/gallary';
 import MainBanner from './components/mainBanner';
 import Location from './components/location';
 import BankAccount from './components/bankAccount';
-import { useVh } from './hooks/useVh';
 import InvitationPhrase from './components/invitationPhrase';
 
 const App = () => {
-  useVh();
-
   return (
     <article
       id="container"
