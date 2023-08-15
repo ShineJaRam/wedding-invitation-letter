@@ -11,9 +11,9 @@ const MainBanner = () => {
       </h1>
       <div className="relative h-[60%]">
         <img
-          className={`absolute h-full w-full object-cover ${styles.common} ${styles.bannerAnimation1}`}
-          src="images/test.jpg"
-          alt="main banner1"
+          className={`absolute h-full w-full object-contain ${styles.common} ${styles.bannerAnimation1}`}
+          src="images/pre_banner.jpeg"
+          alt="pre banner"
         />
         <img
           className={`absolute h-full w-full object-cover ${styles.common} ${styles.bannerAnimation2}`}
