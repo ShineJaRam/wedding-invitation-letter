@@ -8,8 +8,8 @@ const BankAccount = () => {
   const [isSecondOpen, setIsSecondOpen] = useState(false);
 
   const handleClipboard = (name: string, account: string) => {
-    const _account = account.replace('-', '');
-    copy(_account);
+    // const _account = account.replaceAll('-', '');
+    copy(account);
     alert(`${name}님의 계좌번호가 복사되었습니다.\n${account}`);
   };
 
